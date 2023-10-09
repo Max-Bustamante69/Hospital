@@ -63,7 +63,7 @@ Para una mejor visualización de la animación, reduce el número de pacientes p
 
 ## Ejemplos
 
-Puedes realizar peticiones manuales seleccionando dos destinos y observar cómo los primeros dos ascensores realizan sus recorridos.
+Puedes realizar peticiones automaticas para ver la organizacion de los pacientes, como siempre las gravedades superiores son las primeras en ser atendidas, y para alargar esta organizacion y ver en funcionamiento el laboratorio pordras añadir mas paientes repetidamente.
 
 ## Documentación Adicional
 
