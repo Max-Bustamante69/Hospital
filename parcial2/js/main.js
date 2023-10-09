@@ -150,7 +150,7 @@ function iniciarSimulacion() {
     interval = setInterval(actualizarTiempoEspera, 100);
     toogleSimulacion();
   }
-  hospital.generarPacientes(10);
+  hospital.generarPacientes(50);
 }
 
 function reanudarIntervalo() {
