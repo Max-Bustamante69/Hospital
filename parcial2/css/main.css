@@ -1,0 +1,276 @@
+/* Apply a background color to the entire page */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", Helvetica, Arial, serif;
+}
+
+html {
+  background: #333333;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body{
+  margin: 5%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.custom-button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.purple {
+  background-color: rgba(98, 0, 238, 100);
+  color: aliceblue;
+}
+
+.card {
+  text-align: center;
+  align-items: center;
+  border-radius: 2ch;
+}
+
+/* Button Styles */
+button {
+  background-color: black;
+  color: aliceblue;
+  border: none;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s; /* Add a transition for background-color and color */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+
+/* Style the table */
+table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 20px; /* Adjust margin as needed */
+  background: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow to the table */
+  display: inline-block;
+}
+
+thead {
+  background-color: #333; /* Header background color */
+  color: #fff; /* Header text color */
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+th {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.tableHeaders th{
+
+}
+
+
+
+.tableTitle {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+th:first-child {
+  border-top-left-radius: 5px;
+}
+
+th:last-child {
+  border-top-right-radius: 5px;
+}
+
+
+.tableHeaders{
+  text-align: left;
+}
+
+
+td,
+th {
+  padding: 10px;
+}
+
+/* Style alternating rows with different background colors */
+tr:nth-child(even) {
+  background-color: black;
+  color: white;
+  /* Even row background color */
+}
+
+tr:nth-child(odd) {
+  background-color: dimgray;
+  color: white;
+}
+
+.big-title {
+  text-align: center;
+  padding: 50px 0;
+  background: black;
+  transition: background 0.5s;
+}
+
+.big-title:hover {
+  background: linear-gradient(90deg, black, white); /* Gradient background on hover */
+  background-size: 500% 100%;
+  animation: gradientMove 10s linear infinite; /* Smooth gradient animation on hover */
+}
+
+/* Animation Keyframes for gradient movement */
+@keyframes gradientMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.big-title h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  color: white;
+  transition: color 0.5s;
+}
+
+.big-title:hover h1 {
+  color: transparent;
+  animation: textGradient 10s linear infinite alternate;
+}
+
+/* Keyframes for text color animation */
+@keyframes textGradient {
+  0% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
+
+
+dialog {
+  border: black 1px solid;
+  border-radius: 2ch;
+  width: min-content;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+}
+
+dialog::-webkit-backdrop {
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+dialog::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+dialog[open] {
+  -webkit-animation: show 1s ease normal;
+  animation: show 1s ease normal;
+}
+
+@-webkit-keyframes show {
+  from {
+    transform: translateY(-110%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-110%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+dialog.hide {
+  -webkit-animation: hide 1s ease normal;
+  animation: hide 1s ease normal;
+}
+
+@-webkit-keyframes hide {
+  to {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes hide {
+  to {
+    transform: translateY(-150%);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */ /* Center align items */
+    padding: 20px; /* Add padding to the container */
+    height: 100%;
+  }
+
+  .custom-button {
+    width: auto;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+}

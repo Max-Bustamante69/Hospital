@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hospital</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div class="big-title">
+  <h1>L'Hopital</h1>
+</div>
+
+<button id="iniciarSimulacion">Iniciar simulación</button>
+
+
+
+<div class="container" id="tableContainer">
+  <!-- Add your site or application content here -->
+  <table id="Triage">
+    <thead id="thTriage">
+      <tr>
+        <th class="tableTitle" colspan="4">Triage</th>
+      </tr>
+    <tr class="tableHeaders">
+      <th>Nombre</th>
+      <th>Enfermedad</th>
+      <th>Gravedad</th>
+      <th>Tiempo de Espera</th>
+    </tr>
+    </thead>
+    <tbody id="tbTriage">
+    </tbody>
+  </table>
+
+  <table id="Tratamientos">
+    <thead id="thTratamientos">
+    <tr>
+      <th class="tableTitle" colspan="4">Tratamientos</th>
+    </tr>
+    <tr class="tableHeaders">
+      <th>Nombre</th>
+      <th>Enfermedad</th>
+      <th>Gravedad</th>
+      <th>Tratamiento</th>
+    </tr>
+    </thead>
+    <tbody id="tbTratamiento">
+
+
+
+    </tbody>
+  </table>
+
+  <table id="Salida">
+    <thead id="thSalida">
+    <tr >
+      <th class="tableTitle" colspan="4">Salida</th>
+    </tr>
+    <tr class="tableHeaders">
+      <th>Nombre</th>
+      <th>Enfermedad</th>
+      <th>Gravedad</th>
+      <th>Salida</th>
+    </tr>
+    </thead>
+    <tbody id="tbSalida">
+    </tbody>
+  </table>
+</div>
+
+
+  <dialog id="lbDialog">
+    <table id="Laboratorio">
+      <thead id="thLaboratorio">
+      <tr >
+        <th class="tableTitle" colspan="4" >Laboratorio</th>
+      </tr>
+      <tr class="tableHeaders">
+        <th>Nombre</th>
+        <th>Enfermedad</th>
+        <th>Gravedad</th>
+        <th>Medicamento</th>
+      </tr>
+      </thead>
+      <tbody id="tbLaboratorio">
+      </tbody>
+    </table>
+    <button class="btnCerrar" id="cerrarLab">Cerrar</button>
+  </dialog>
+
+<dialog id="infDialog">
+  <h1>Informacion de Los Pacientes Atendidos</h1>
+  <table id="Informacion">
+    <thead id="thInformacion">
+    <tr>
+      <th class="tableTitle" colspan="7">Informacion</th>
+    </tr>
+    <tr class="tableHeaders">
+      <th>Nombre</th>
+      <th>Enfermedad</th>
+      <th>Gravedad</th>
+      <th>Tiempo de Espera</th>
+      <th>Tratamiento</th>
+      <th>Salida</th>
+      <th>Identificacion</th>
+    </tr>
+    </thead>
+    <tbody id="tbInformacion">
+    </tbody>
+  </table>
+
+  <h1>Pacientes Atendidos :<p id="numeroPacientes"></p></h1>
+  <h4>Pacientes en Codigo Azul :<p id="numeroPacientesAzul"></p></h4>
+  <h4>Pacientes en Codigo Urgente :<p id="numeroPacientesUrgente"></p></h4>
+  <h4>Pacientes en Codigo Normales :<p id="numeroPacientesNormal"></p></h4>
+  <h4>Pacientes en Codigo Leve :<p id="numeroPacientesLeve"></p></h4>
+
+  <button class="btnCerrar" id="cerrarInf">Cerrar</button>
+  <button id="descargarTXT">Descargar TXT</button>
+
+</dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js" type="module" ></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</body>
+
+</html>
