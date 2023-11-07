@@ -59,7 +59,7 @@ class Hospital {
   evaluarSalidaMedica(paciente) {
     if (paciente.salida === "Alta con medicamento") {
       paciente.medicamento = this.generarMedicamento();
-      this.laboratorio.push(paciente);
+      this.laboratorio.unshift(paciente);
     }
   }
 
